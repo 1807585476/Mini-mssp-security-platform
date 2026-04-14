@@ -65,7 +65,7 @@ Tetragon → Wazuh → SIEM Correlation
 - Extensibility: Retool, Directus, n8n
 
 ---
-
+```md
 ## 📊 Architecture Diagram
 
 ```text
@@ -98,8 +98,7 @@ Tetragon → Wazuh → SIEM Correlation
           +----------------+----------------+
           |                                 |
       Telegram                          Feishu
-   Alert Channel                   Alert Channel 
-
+   Alert Channel                   Alert Channel
 ---
 
 ## 🏗️ Multi-Tenant Design
