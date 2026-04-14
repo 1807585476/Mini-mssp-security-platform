@@ -1,12 +1,45 @@
-# Mini-mssp-security-platform
-Production-based MSSP security platform with Wazuh, Falco, Tetragon and AWS automated alerting (SIEM + runtime + cloud security)
-
-This system is based on a real production deployment I built and operated in a company environment.
 # Mini MSSP Security Platform
 
-This project demonstrates a production-grade security monitoring and automation platform, combining SIEM, runtime security, and cloud-native alerting pipelines.
+End-to-end cloud-native security platform integrating:
 
+- SIEM (Wazuh)
+- Runtime security (Falco, Tetragon)
+- Cloud security (AWS CloudTrail, Config, CloudWatch)
+- Automated alerting pipeline (Lambda → Telegram / Feishu)
+
+---
+
+## 🚀 What This Project Demonstrates
+
+This project is based on a **real production deployment** and demonstrates how to:
+
+- Build a centralized security monitoring platform (SIEM)
+- Detect runtime threats in containers and hosts
+- Monitor cloud activities and compliance in AWS
+- Design an event-driven alerting pipeline with near real-time delivery
 > ⚠️ Due to company security policies, direct access to the production environment is restricted. The following screenshots and architecture are from a real deployed system (with sensitive data masked).
+
+---
+
+## 👨‍💻 My Role
+
+In this project, I was responsible for:
+
+- Designing the overall security architecture (SIEM + runtime + cloud)
+- Deploying and configuring Wazuh, Falco, and Tetragon in production
+- Integrating cloud security logs (CloudTrail, Config, CloudWatch)
+- Building serverless alert pipelines using AWS Lambda
+- Implementing real-time alert delivery to Telegram and Feishu
+- Writing custom detection rules and alert formatting logic
+
+---
+
+## 🔄 Detection & Response Flow
+
+Falco → Falcosidekick → Webhook → Lambda → Telegram  
+Wazuh → Rule Engine → Alert → Telegram  
+CloudTrail → EventBridge → Lambda → Feishu  
+Tetragon → Wazuh → SIEM Correlation  
 
 ---
 
@@ -110,6 +143,28 @@ This system can be extended into a full MSSP platform including:
 - Workflow orchestration (n8n)  
 - Billing integration (WHMCS)  
 - Deployment automation (Docker / Terraform)  
+
+---
+
+## 🧠 Detection Engineering Highlights
+
+- Custom Wazuh rules for authentication and privilege escalation detection  
+- Falco rule tuning to reduce noise in container environments  
+- Tetragon event ingestion and normalization into SIEM  
+- CloudTrail event filtering for high-risk API actions  
+- Alert enrichment and formatting in Lambda (JSON → human-readable alerts)
+
+
+---
+
+## 🏗️ Design Decisions
+
+- Chose Wazuh for open-source SIEM flexibility and rule customization  
+- Used Falco for real-time container threat detection  
+- Integrated Tetragon for deeper kernel-level visibility  
+- Leveraged AWS Lambda for cost-effective, serverless alert processing  
+- Used messaging platforms (Telegram / Feishu) for instant alert delivery
+
 
 ---
 
