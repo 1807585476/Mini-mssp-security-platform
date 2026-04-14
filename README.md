@@ -30,9 +30,9 @@ This project demonstrates a production-grade security monitoring and automation 
 - PAM / authentication event monitoring  
 - Custom rule detection  
 
-📸 Example:
+📸 **Wazuh Dashboard**
 
-![Wazuh Dashboard](./images/wazuh-dashboard.png)
+![Wazuh Dashboard](images/wazuh-dashboard.png)
 
 ---
 
@@ -42,13 +42,15 @@ This project demonstrates a production-grade security monitoring and automation 
 - Kernel-level process execution monitoring (Tetragon)  
 - Integrated into Wazuh for centralized visibility  
 
-📸 Example (Tetragon → Wazuh):
+📸 **Tetragon → Wazuh Integration**
 
-![Tetragon Integration](./images/tetragon-wazuh.png)
+![Tetragon](images/tetragon-integration.png)
 
-📸 Example (Falco alert):
+📸 **Falco Runtime Alert**
 
-![Falco Alert](./images/falco.png)
+![Falco Alert](images/falco-alert-1.png)
+
+![Falco Alert 2](images/falco-alert-2.png)
 
 ---
 
@@ -58,9 +60,11 @@ This project demonstrates a production-grade security monitoring and automation 
 - AWS Config compliance monitoring  
 - CloudWatch anomaly detection  
 
-📸 Example:
+📸 **AWS Alert → Feishu**
 
-![Cloud Alert](./images/aws-alert.png)
+![AWS Alert](images/aws-alert-lark.png)
+
+![AWS Config](images/aws-config-alert-lark.png)
 
 ---
 
@@ -70,14 +74,15 @@ This project demonstrates a production-grade security monitoring and automation 
 - Real-time notification to Feishu / Telegram  
 - Structured alert formatting and routing  
 
-📸 Example:
+📸 **Wazuh → Telegram Alert**
 
-![Alert Notification](./images/feishu-alert.png)
+![Wazuh TG](images/wazuh-alert-tg.png)
 
-📸 Lambda Monitoring:
+📸 **Lambda Monitoring**
 
-![Lambda Metrics](./images/lambda.png)
+![Lambda](images/lambda-monitor-1.png)
 
+![Lambda](images/lambda-monitor-2.png)
 ---
 
 ## ⚙️ Automation Design
