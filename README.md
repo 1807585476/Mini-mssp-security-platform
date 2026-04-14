@@ -97,7 +97,7 @@ Tetragon → Wazuh → SIEM Correlation
                            |
           +----------------+----------------+
           |                                 |
-      Telegram                          Feishu
+      Telegram                          Feishu(Lark)
    Alert Channel                   Alert Channel
 
 ```
