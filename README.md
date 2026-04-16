@@ -128,23 +128,26 @@ This platform is designed with multi-tenant capability in mind, enabling isolati
 
 This system can be extended into a full MSSP platform with:
 
-- **Admin / Client Portal** (Retool / Directus)  
-  For tenant management, alert visualization, and access control
+- **Admin / Client Portal (Retool)**  
+  For alert visualization, operations, and analyst workflows  
 
-- **Workflow Automation** (n8n)  
-  For incident response and alert orchestration
+- **Data Management Layer (Directus)**  
+  For structured data storage, API access, and potential RBAC/multi-tenant control  
 
-- **Billing Integration** (WHMCS)  
-  For MSSP commercial operations
+- **Workflow Automation (n8n)**  
+  For incident response and alert orchestration  
 
-- **Infrastructure as Code** (Terraform / Docker)  
-  For scalable and repeatable deployments
+- **Billing Integration (WHMCS)**  
+  For MSSP commercial operations  
+
+- **Infrastructure as Code (Terraform / Docker)**  
+  For scalable and repeatable deployments  
 
 ---
 
-### 🖥️ Example: Retool Admin Dashboard
+### 🖥️ Admin Dashboard (Retool Demo)
 
-As part of this extensibility, I built a Retool-based admin dashboard connected to Wazuh data (via Elasticsearch/OpenSearch).
+As part of platform extensibility, I built a Retool-based admin dashboard connected to Wazuh data (via Elasticsearch/OpenSearch).
 
 This dashboard demonstrates:
 - Alert visualization and filtering
@@ -154,6 +157,24 @@ This dashboard demonstrates:
 📸 **Retool Dashboard Demo**
 
 ![Retool Dashboard](images/retool-dashboard.png)
+
+---
+
+### 🗄️ Data Management Layer (Directus Demo)
+
+To explore a more structured data management approach, I also built a Directus-based demo on top of processed security logs.
+
+This demonstrates:
+- Structured log storage and querying
+- Custom fields for incident tracking (status, handler, notes)
+- API-first design for integration with other systems
+- Foundation for RBAC and multi-tenant data access
+
+📸 **Directus Log Management Demo**
+
+![Directus Dashboard](images/directus-dashboard.png)
+
+> Note: This is a conceptual extension. Directus can serve as a backend data layer, while tools like Retool act as the frontend operation layer.
 
 ### 1. SIEM & Log Analysis (Wazuh)
 
