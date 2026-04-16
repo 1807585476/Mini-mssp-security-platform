@@ -139,7 +139,21 @@ This system can be extended into a full MSSP platform with:
 
 - **Infrastructure as Code** (Terraform / Docker)  
   For scalable and repeatable deployments
-## 🔐 Key Capabilities
+
+---
+
+### 🖥️ Example: Retool Admin Dashboard
+
+As part of this extensibility, I built a Retool-based admin dashboard connected to Wazuh data (via Elasticsearch/OpenSearch).
+
+This dashboard demonstrates:
+- Alert visualization and filtering
+- Tenant-based data views
+- Operational workflow (ignore / escalate / ticketing simulation)
+
+📸 **Retool Dashboard Demo**
+
+![Retool Dashboard](images/retool-dashboard.png)
 
 ### 1. SIEM & Log Analysis (Wazuh)
 
